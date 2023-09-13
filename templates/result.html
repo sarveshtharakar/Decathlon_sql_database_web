@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Results</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        h1 {
+            font-size: 24px;
+            color: #333; 
+            margin-bottom: 20px;
+        }
+
+       
+        table {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff; 
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            margin-top: 20px;
+        }
+
+        
+        th {
+            background-color: #007bff; 
+            color: #fff; 
+            padding: 10px;
+            text-align: left;
+        }
+
+       
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Query Results:</h1>
+    <table border="1">
+        <tr>
+            {% for column_name in column_names %}
+                <th>{{ column_name }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in result %}
+            <tr>
+                {% for column in row %}
+                    <td>{{ column }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

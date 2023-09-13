@@ -1,0 +1,129 @@
+body {
+    background-image: url('decathlon-logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+
+form {
+    display: inline-block;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px); 
+    opacity: 0; 
+    animation: slideIn 0.5s ease forwards 0.5s; 
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 0.5s ease forwards 1s; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    animation: fadeIn 0.5s ease forwards 1.5s;
+}
+
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 0.5s ease forwards 2s;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+form > textarea,
+form > input[type="submit"] {
+    margin-top: 15px;
+}
+
+.error-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: skyblue;
+}
+
+
+h1 {
+    font-size: 24px;
+    color: #f00;
+}
+
+
+p {
+    font-size: 16px;
+    color: #333;
+}

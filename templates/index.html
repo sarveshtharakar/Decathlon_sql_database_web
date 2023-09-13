@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MySQL Query Executor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Enter your SQL query:</h1>
+    <form action="/execute_query" method="post">
+        <textarea name="query" rows="4" cols="50" placeholder="Enter your query here"></textarea><br>
+        <input type="submit" value="Execute">
+    </form>
+
+    <h1>Error:</h1>
+    <p>{{ error }}</p>
+</body>
+</html>
